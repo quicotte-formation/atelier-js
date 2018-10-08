@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1 id="titre">Exercices sur le DOM</h1>
+        <form id="monForm">
+            <input type="button" onclick="clic(this)">
+            <label class="titre">Pseudo</label>
+            <input id="pseudo" name="name">
+            <br>
+            <label class="titre">M-d-p</label>
+            <input type="password" id="mdp" name="mdp">
+            <br>
+            <input type="button" value="Connexion" onclick="clicConnexion();">
+        </form>
+        <script>
+            
+            function clic(domElem){
+                
+                console.log( domElem.getAttribute("type") );
+            }
+            
+            function clicConnexion(){
+                // Récup longueur pseudo et mdp actuels présents ds 2 input
+                var longueurPseudo = document.getElementById("pseudo").value.length;
+                var longueurMdp = document.getElementById("mdp").value.length;
+                
+                // Affiche msg err si longueurPseudo ou longueurMdp < 3
+                if( longueurPseudo<3 || longueurMdp<3 ){
+                    alert("Au - 3 caractères !");
+                    return;
+                }
+                
+                // Validation OK
+                
+                // Vide form et affiche à la place texte
+                var pseudo = document.getElementById("pseudo").value;
+                document.getElementById("monForm").innerHTML = "Bienvenue " + pseudo;
+            }
+        </script>
+    </body>
+</html>

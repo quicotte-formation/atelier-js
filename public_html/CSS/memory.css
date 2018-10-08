@@ -1,0 +1,41 @@
+header{
+    text-align: center;
+    background-image: url('IMG/Palmiers-43e-48e-1-R.jpg');
+    /*font-size: 30px;*/
+}
+
+main{
+    text-align: center;
+}
+
+table{
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td{
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    width: 20px;
+    height: 20px;
+}
+
+tr:nth-of-type(odd) td:nth-of-type(odd),
+tr:nth-of-type(even) td:nth-of-type(even){
+    background-color: green;
+}
+
+button{
+    border: none;
+    background-color: blue;
+    border-radius: 15px;
+    margin-top: 30px;
+    font-size: 40px;
+}
+
+footer{
+    text-align: center;
+    background-color: grey;
+    color: ivory;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+
+            /**
+             * Retourne la factorielle du nombre en parm
+             * @param {type} n 
+             * @returns {numbre}
+             */
+            function factorielle(n){
+                
+                if( n<=1 )
+                    return 1;
+                
+                return n * factorielle(n-1);
+            }
+
+            /**
+             * Retourne le nom du sort en fonction du nom des cartes passées en param.
+             * @param {type} carte1 Le nom de la carte 1
+             * @param {type} carte2 Le nom de la carte 2
+             * @returns {string} Le nom du sort déterminé
+             */
+            function sort(carte1, carte2){
+                
+                if( carte1=='mandragore' && carte2=='licorne' ){
+                    return 'invisibilité';
+                }else if( carte1=='chauve-souris' && carte2=='bave-crapaud' ){
+                    return 'someil profond';
+                }else{
+                    return 'ERREUR';
+                }
+            }
+
+            function exposant(n, p){
+                
+                var res = 1;
+                
+                for(var i=0;i<p;i++){
+                    
+                    res = res * n;
+                }
+                
+                return res;
+            }
+
+            function additionne(a, b) {
+
+                var res = Math.ceil(a + b);
+
+                return res;
+            }
+
+        </script>
+    </body>
+</html>
